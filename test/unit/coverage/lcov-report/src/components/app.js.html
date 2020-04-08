@@ -1,0 +1,782 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/app.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">src/components/</a> app.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0.98% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>1/102</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/22</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/24</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0.99% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>1/101</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">require('./bootstrap');
+&nbsp;
+import Vue from "vue";
+// import { VueMasonryPlugin } from 'vue-masonry';
+// Vue.use(VueMasonryPlugin);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >Vue.component("quiz", require("./components/quiz/index.vue").default);</span>
+<span class="cstat-no" title="statement not covered" >Vue.component("user-save", require("./components/user-save/index.vue").default);</span>
+<span class="cstat-no" title="statement not covered" >Vue.component("filter-bar", require("./components/filter-bar/index.vue").default);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >new Vue({</span>
+    el: "#app",
+});
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >global.jQuery = require('jquery');</span>
+var $ = <span class="cstat-no" title="statement not covered" >global.jQuery;</span>
+<span class="cstat-no" title="statement not covered" >window.$ = $;</span>
+&nbsp;
+&nbsp;
+//require('./isotope');
+// var Masonry = require('masonry-layout');
+&nbsp;
+let owl_carousel = <span class="cstat-no" title="statement not covered" >require('owl.carousel');</span>
+<span class="cstat-no" title="statement not covered" >window.fn = owl_carousel;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >$(document).ready(function() <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >    $('.switcher .owl-carousel').owlCarousel({</span>
+        items: 1,
+        dots: true,
+        loop: true
+    });
+<span class="cstat-no" title="statement not covered" >    $('.home_partners .owl-carousel').owlCarousel({</span>
+        dots: true,
+        loop: true,
+        responsiveClass: true,
+        nav: false,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 2
+            },
+            992: {
+                items: 3
+            }
+        }
+    });
+<span class="cstat-no" title="statement not covered" >    $(".hamburger").click(function() <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >        $("body").addClass('mobile-menu');</span>
+    });
+<span class="cstat-no" title="statement not covered" >    $(".close").click(function() <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >        $("body").removeClass('mobile-menu');</span>
+    });
+<span class="cstat-no" title="statement not covered" >    $(".parent").click(function() <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >        $('header .parent .dropdown').toggleClass('open');</span>
+<span class="cstat-no" title="statement not covered" >        $(".parent img.caret").toggleClass('rotate');</span>
+    });
+&nbsp;
+&nbsp;
+&nbsp;
+    // touch-screen devices:
+<span class="cstat-no" title="statement not covered" >    $('header .parent').click(function() <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >        $(this).sibling().toggleClass('clicked');</span>
+<span class="cstat-no" title="statement not covered" >        return false;</span>
+    });
+&nbsp;
+    // handle touch device events on drop down, first tap adds class, second navigates
+<span class="cstat-no" title="statement not covered" >    $('header .parent').on('touchend', function(e) <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >        if ($('header .parent .dropdown').is(':scaleY(0)')) {</span>
+            var parent = <span class="cstat-no" title="statement not covered" >$(this).parent();</span>
+<span class="cstat-no" title="statement not covered" >            $(this).find('.clicked').removeClass('clicked');</span>
+<span class="cstat-no" title="statement not covered" >            if (parent.hasClass('clicked')) {</span>
+<span class="cstat-no" title="statement not covered" >                window.location.href = $(this).attr('href');</span>
+            } else {
+<span class="cstat-no" title="statement not covered" >                parent.addClass('clicked');</span>
+<span class="cstat-no" title="statement not covered" >                e.preventDefault();</span>
+            }
+        }
+    });
+&nbsp;
+    // prevent links for propagating click/tap events that may trigger hiding/unhiding 
+<span class="cstat-no" title="statement not covered" >    $('header .parent').on('click', function(event) <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >        if (event.stopPropagation) {</span>
+<span class="cstat-no" title="statement not covered" >            event.stopPropagation();</span>
+        } else {
+<span class="cstat-no" title="statement not covered" >            event.cancelBubble = true;</span>
+        }
+    });
+&nbsp;
+&nbsp;
+    // handle touch device events on filter-bar
+<span class="cstat-no" title="statement not covered" >    $('.filter-bar .container .dropdown .dropdown-toggle').on('touchend', function() <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >        $(this).next().css('transform', ':scaleY(1)');</span>
+    });
+<span class="cstat-no" title="statement not covered" >    $('.filter-bar .container .dropdown .dropdown-menu li').on('touchend', function() <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >        $(this).parent().css('transform', ':scaleY(0)');</span>
+    });
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $(".user_buttons").click(function() <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >        $(".dropdown").toggleClass('open');</span>
+<span class="cstat-no" title="statement not covered" >        $("i.caret").toggleClass('rotate');</span>
+    });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $('#tabs li a:not(:first)').addClass('inactive');</span>
+<span class="cstat-no" title="statement not covered" >    $('.tab-container').hide();</span>
+<span class="cstat-no" title="statement not covered" >    $('.tab-container:first').show();</span>
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $('#tabs li a').click(function() <span class="fstat-no" title="function not covered" >{</span></span>
+        var t = <span class="cstat-no" title="statement not covered" >$(this).attr('id');</span>
+<span class="cstat-no" title="statement not covered" >        if ($(this).hasClass('inactive')) { //this is the start of our condition </span>
+<span class="cstat-no" title="statement not covered" >            $('#tabs li a').addClass('inactive');</span>
+<span class="cstat-no" title="statement not covered" >            $(this).removeClass('inactive');</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            $('.tab-container').hide();</span>
+<span class="cstat-no" title="statement not covered" >            $('#' + t + 'C').fadeIn('slow');</span>
+        }
+&nbsp;
+    });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if ($('dl.accordion').length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >        $('.accordion &gt; dt &gt; a').click(function() <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >            if ($('dl.accordion').is(':visible')) {</span>
+<span class="cstat-no" title="statement not covered" >                $(this).parent().next().slideToggle();</span>
+<span class="cstat-no" title="statement not covered" >                $(this).find("i").toggleClass("rotate");</span>
+<span class="cstat-no" title="statement not covered" >                return false;</span>
+            }
+        });
+    }
+});
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >window.matchHeights = function(selector) <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >    $(selector).height('');</span>
+    var maxHeight = <span class="cstat-no" title="statement not covered" >Math.max.apply(null, $(selector).map(function() <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >        return $(this).outerHeight();</span>
+    }).get());
+<span class="cstat-no" title="statement not covered" >    $(selector).outerHeight(maxHeight);</span>
+}
+&nbsp;
+// window.startMasonary = function(selector, parent) {
+//     if ($(parent).length &gt; 0) {
+//         window.matchHeights(selector);
+//         var msnry = new Masonry(parent, {
+//             gutter: 30
+//         });
+//         $(window).resize(function() {
+//             window.matchHeights(selector);
+//         });
+//         this.console.log('startMasonary', selector)
+//     }
+// }
+&nbsp;
+// window.onload = function() {
+//     window.startMasonary('.tile-list .row &gt; *', '.tile-list .row');
+//     window.startMasonary('.partner-tile .row &gt; *', '.partner-tile .row');
+//     window.startMasonary('.tab-container &gt; *', '.tab-container');
+//     window.startMasonary('.related-articles .tab-container &gt; *', '.related-articles .tab-container');
+// };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >$(document).ready(function() <span class="fstat-no" title="function not covered" >{</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $(".learn-link").click(function() <span class="fstat-no" title="function not covered" >{</span></span>
+        var link = <span class="cstat-no" title="statement not covered" >$(this).attr("href");</span>
+        var slicedTxt = <span class="cstat-no" title="statement not covered" >link.slice(1);</span>
+        var otherTabsObj = <span class="cstat-no" title="statement not covered" >$("#tabs li a").not(document.getElementById(slicedTxt));</span>
+<span class="cstat-no" title="statement not covered" >        $("#tabs li a").addClass("inactive");</span>
+<span class="cstat-no" title="statement not covered" >        $("#tabs li a#" + slicedTxt).removeClass("inactive");</span>
+<span class="cstat-no" title="statement not covered" >        $("#" + slicedTxt + "C").css("display", "block");</span>
+    });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if ($(window).width() &gt; 768) {</span>
+<span class="cstat-no" title="statement not covered" >        $('.container').each(function() <span class="fstat-no" title="function not covered" >{</span></span>
+            var highestBox = <span class="cstat-no" title="statement not covered" >0;</span>
+<span class="cstat-no" title="statement not covered" >            $('.wellbeing', this).each(function() <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >                if ($(this).height() &gt; highestBox) {</span>
+<span class="cstat-no" title="statement not covered" >                    highestBox = $(this).height();</span>
+                }
+            });
+<span class="cstat-no" title="statement not covered" >            $('.wellbeing', this).height(highestBox);</span>
+        });
+    }
+    ///** Partners page: tabs(desktop) to accordion(mobile)  ****/
+<span class="cstat-no" title="statement not covered" >    if ($(window).width() &gt; 599) {</span>
+<span class="cstat-no" title="statement not covered" >        $(".tabs-list li a").click(function(e) <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >            e.preventDefault();</span>
+        });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        $(".tabs-list li").click(function() <span class="fstat-no" title="function not covered" >{</span></span>
+            var tabid = <span class="cstat-no" title="statement not covered" >$(this).find("a").attr("href");</span>
+<span class="cstat-no" title="statement not covered" >            $(".tabs-list li,.tabs div.tab").removeClass("active");</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            $(".tab").hide();</span>
+<span class="cstat-no" title="statement not covered" >            $(tabid).show();</span>
+<span class="cstat-no" title="statement not covered" >            $(this).addClass("active");</span>
+&nbsp;
+        });
+    }
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if ($(window).width() &lt; 599) {</span>
+<span class="cstat-no" title="statement not covered" >        $('#switch1').on('click', function() <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >            $(this).toggleClass('rotate');</span>
+<span class="cstat-no" title="statement not covered" >            $("#overview").toggleClass("hide");</span>
+        });
+<span class="cstat-no" title="statement not covered" >        $('#switch2').on('click', function() <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >            $(this).toggleClass('rotate');</span>
+<span class="cstat-no" title="statement not covered" >            $("#faq").toggleClass("hide");</span>
+        });
+<span class="cstat-no" title="statement not covered" >        $('.filter-bar .dropdown').addClass('invisible');</span>
+<span class="cstat-no" title="statement not covered" >        $('.filter-bar #mobileMenu_hit').on('click', function() <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >            $('.filter-bar .title').toggleClass('hide');</span>
+<span class="cstat-no" title="statement not covered" >            $('.filter-bar .dropdown').toggleClass('invisible');</span>
+        });
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if ($('#date1').prop('type') != 'date') { <span class="cstat-no" title="statement not covered" >$('#date1').datepicker() </span>};</span>
+&nbsp;
+&nbsp;
+    // /quiz: last question, "show results"
+<span class="cstat-no" title="statement not covered" >    $(".slides-group .slide .col-2").on("click", function() <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >        $("#finished").removeClass("hidden");</span>
+    });
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+});
+&nbsp;
+// $(function() {
+//     $('[data-toggle="tooltip"]').tooltip()
+// })
+&nbsp;
+// // Initialize popover component
+// $(function() {
+//     $('[data-toggle="popover"]').popover()
+// })</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Apr 08 2020 15:22:52 GMT+1000 (Australian Eastern Standard Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
